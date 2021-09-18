@@ -1,0 +1,9 @@
+etc/x52d/x52d.conf
+lib/udev/rules.d
+lib/systemd/system/x52d.service
+usr/lib/*/lib*.so.*
+usr/bin/x52cli
+usr/bin/x52test
+usr/bin/x52evtest
+usr/bin/x52d
+usr/share/man/man1/x52cli.1

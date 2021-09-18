@@ -1,0 +1,36 @@
+x52pro-linux (0.2.2-0ubuntu4) focal; urgency=medium
+
+  * Fix configure.ac to install udev rules in the correct location in
+    launchpad.
+
+ -- Nirenjan Krishnan <nirenjan@gmail.com>  Sat, 18 Sep 2021 07:44:58 -0700
+
+x52pro-linux (0.2.2-0ubuntu3) focal; urgency=medium
+
+  * Disable triggering udevadm
+
+ -- Nirenjan Krishnan <nirenjan@gmail.com>  Sat, 18 Sep 2021 07:41:40 -0700
+
+x52pro-linux (0.2.2-0ubuntu2) focal; urgency=medium
+
+  * Fix udev builds in launchpad
+
+ -- Nirenjan Krishnan <nirenjan@gmail.com>  Sat, 18 Sep 2021 07:31:17 -0700
+
+x52pro-linux (0.2.2-0ubuntu1) focal; urgency=medium
+
+  * New upstream release
+
+ -- Nirenjan Krishnan <nirenjan@gmail.com>  Fri, 03 Sep 2021 11:54:33 -0700
+
+x52pro-linux (0.2.1-0ubuntu1) focal; urgency=medium
+
+  * New upstream release
+
+ -- Nirenjan Krishnan <nirenjan@gmail.com>  Sun, 28 Jun 2020 13:40:55 -0700
+
+x52pro-linux (0.2.0-0ubuntu1) focal; urgency=medium
+
+  * Initial release
+
+ -- Nirenjan Krishnan <nirenjan@gmail.com>  Tue, 26 May 2020 17:50:35 -0700

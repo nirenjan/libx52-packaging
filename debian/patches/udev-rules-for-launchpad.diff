@@ -1,0 +1,39 @@
+Remove if HAVE_UDEV block, since this is false when building in Launchpad.
+Index: x52pro-linux-0.2.2/udev/Makefile.am
+===================================================================
+--- x52pro-linux-0.2.2.orig/udev/Makefile.am
++++ x52pro-linux-0.2.2/udev/Makefile.am
+@@ -6,21 +6,4 @@
+ 
+ EXTRA_DIST += udev/60-saitek-x52-x52pro.rules
+ 
+-if HAVE_UDEV
+-
+-# udev rules need to go to (typically) /lib/udev/rules.d. This location is only
+-# writable by root, and if we're running make distcheck, we're most likely not
+-# running as root. Therefore, disable this if we're running make distcheck
+-if !IS_MAKE_DISTCHECK
+ udevrules_DATA = udev/60-saitek-x52-x52pro.rules
+-
+-# Update udev only if being installed by root
+-install-data-hook:
+-	$(AM_V_at)if [ "$$(id -u)" = "0" ]; then \
+-		echo "Installing udev rules" && \
+-		udevadm control --reload-rules && \
+-		udevadm trigger --subsystem-match=usb --attr-match=idVendor=06a3 --action=add \
+-	;fi ; true
+-endif
+-
+-endif
+Index: x52pro-linux-0.2.2/configure.ac
+===================================================================
+--- x52pro-linux-0.2.2.orig/configure.ac
++++ x52pro-linux-0.2.2/configure.ac
+@@ -95,6 +95,7 @@ AC_ARG_WITH([udevrulesdir],
+     AS_HELP_STRING([--with-udevrulesdir=DIR], [Directory for udev rules]),
+     [udevrulesdir=$withval],
+     [udevrulesdir=$($PKG_CONFIG --variable=udevdir udev)"/rules.d"])
++udevrulesdir="/lib/udev/rules.d"
+ AC_SUBST([udevrulesdir], [$udevrulesdir])
+ 
+ AC_ARG_WITH([input-group],
