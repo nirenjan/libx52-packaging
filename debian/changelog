@@ -1,3 +1,9 @@
+x52pro-linux (0.2.2-0ubuntu5) focal; urgency=medium
+
+  * Fix copyright notices for subprojects. 
+
+ -- Nirenjan Krishnan <nirenjan@gmail.com>  Sun, 19 Sep 2021 17:36:54 -0700
+
 x52pro-linux (0.2.2-0ubuntu4) focal; urgency=medium
 
   * Fix configure.ac to install udev rules in the correct location in
