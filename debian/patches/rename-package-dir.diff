@@ -1,23 +1,23 @@
 Rename package to libx52
 
 This makes it cleaner for the translation files.
-Index: x52pro-linux-0.2.2/configure.ac
+Index: libx52-packaging/configure.ac
 ===================================================================
---- x52pro-linux-0.2.2.orig/configure.ac
-+++ x52pro-linux-0.2.2/configure.ac
+--- libx52-packaging.orig/configure.ac
++++ libx52-packaging/configure.ac
 @@ -4,7 +4,7 @@
  #
  # SPDX-License-Identifier: GPL-2.0-only WITH Classpath-exception-2.0
  
--AC_INIT([x52pro-linux], [0.2.2], [nirenjan@gmail.com])
-+AC_INIT([libx52], [0.2.2], [nirenjan@gmail.com])
+-AC_INIT([x52pro-linux], [0.2.3], [nirenjan@gmail.com])
++AC_INIT([libx52], [0.2.3], [nirenjan@gmail.com])
  AC_CONFIG_MACRO_DIR([m4])
  AM_INIT_AUTOMAKE([-Wall foreign subdir-objects])
  AC_REQUIRE_AUX_FILE([tap-driver.sh])
-Index: x52pro-linux-0.2.2/po/README.md
+Index: libx52-packaging/po/README.md
 ===================================================================
---- x52pro-linux-0.2.2.orig/po/README.md
-+++ x52pro-linux-0.2.2/po/README.md
+--- libx52-packaging.orig/po/README.md
++++ libx52-packaging/po/README.md
 @@ -22,14 +22,14 @@ Once you add new strings to be translate
  any new files that have to be translated. The file path is relative to the root
  of the project.
@@ -35,10 +35,10 @@ Index: x52pro-linux-0.2.2/po/README.md
  for that language. Language code is a 2 letter
  [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) code with an
  optional [ISO-3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) region
-Index: x52pro-linux-0.2.2/po/libx52.pot
+Index: libx52-packaging/po/libx52.pot
 ===================================================================
 --- /dev/null
-+++ x52pro-linux-0.2.2/po/libx52.pot
++++ libx52-packaging/po/libx52.pot
 @@ -0,0 +1,716 @@
 +# SOME DESCRIPTIVE TITLE.
 +# Copyright (C) YEAR Nirenjan Krishnan
@@ -48,9 +48,9 @@ Index: x52pro-linux-0.2.2/po/libx52.pot
 +#, fuzzy
 +msgid ""
 +msgstr ""
-+"Project-Id-Version: libx52 0.2.2\n"
++"Project-Id-Version: libx52 0.2.3\n"
 +"Report-Msgid-Bugs-To: https://github.com/nirenjan/x52pro-linux/issues\n"
-+"POT-Creation-Date: 2021-08-30 12:33-0700\n"
++"POT-Creation-Date: 2021-09-19 16:45-0700\n"
 +"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 +"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 +"Language-Team: LANGUAGE <LL@li.org>\n"
@@ -756,11 +756,11 @@ Index: x52pro-linux-0.2.2/po/libx52.pot
 +#, c-format
 +msgid "Error %d when updating X52 device: %s"
 +msgstr ""
-Index: x52pro-linux-0.2.2/po/x52pro-linux.pot
+Index: libx52-packaging/po/x52pro-linux.pot
 ===================================================================
---- x52pro-linux-0.2.2.orig/po/x52pro-linux.pot
+--- libx52-packaging.orig/po/x52pro-linux.pot
 +++ /dev/null
-@@ -1,716 +0,0 @@
+@@ -1,792 +0,0 @@
 -# SOME DESCRIPTIVE TITLE.
 -# Copyright (C) YEAR Nirenjan Krishnan
 -# This file is distributed under the same license as the x52pro-linux package.
@@ -769,9 +769,9 @@ Index: x52pro-linux-0.2.2/po/x52pro-linux.pot
 -#, fuzzy
 -msgid ""
 -msgstr ""
--"Project-Id-Version: x52pro-linux 0.2.2\n"
+-"Project-Id-Version: x52pro-linux 0.2.3\n"
 -"Report-Msgid-Bugs-To: https://github.com/nirenjan/x52pro-linux/issues\n"
--"POT-Creation-Date: 2021-08-30 12:33-0700\n"
+-"POT-Creation-Date: 2021-09-19 16:45-0700\n"
 -"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 -"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 -"Language-Team: LANGUAGE <LL@li.org>\n"
@@ -905,11 +905,11 @@ Index: x52pro-linux-0.2.2/po/x52pro-linux.pot
 -msgid "Unknown LED state %d"
 -msgstr ""
 -
--#: libx52/x52_stringify.c:47 daemon/x52d_clock.c:28
+-#: libx52/x52_stringify.c:47 daemon/x52d_clock.c:28 daemon/x52d_mouse.c:31
 -msgid "off"
 -msgstr ""
 -
--#: libx52/x52_stringify.c:48 daemon/x52d_clock.c:28
+-#: libx52/x52_stringify.c:48 daemon/x52d_clock.c:28 daemon/x52d_mouse.c:31
 -msgid "on"
 -msgstr ""
 -
@@ -1254,17 +1254,17 @@ Index: x52pro-linux-0.2.2/po/x52pro-linux.pot
 -msgid "OK"
 -msgstr ""
 -
--#: daemon/x52d_main.c:58
+-#: daemon/x52d_main.c:60
 -#, c-format
 -msgid "Error %d setting log file: %s\n"
 -msgstr ""
 -
--#: daemon/x52d_main.c:74
+-#: daemon/x52d_main.c:76
 -#, c-format
 -msgid "Error %d installing handler for signal %d: %s"
 -msgstr ""
 -
--#: daemon/x52d_main.c:85
+-#: daemon/x52d_main.c:87
 -#, c-format
 -msgid ""
 -"Usage: %s [-f] [-v] [-q]\n"
@@ -1272,63 +1272,63 @@ Index: x52pro-linux-0.2.2/po/x52pro-linux.pot
 -"\t[-c config-file] [-p pid-file]\n"
 -msgstr ""
 -
--#: daemon/x52d_main.c:115
+-#: daemon/x52d_main.c:117
 -#, c-format
 -msgid "Daemon is already running as PID %u"
 -msgstr ""
 -
--#: daemon/x52d_main.c:253
+-#: daemon/x52d_main.c:255
 -#, c-format
 -msgid "Unable to parse configuration override '%s'\n"
 -msgstr ""
 -
--#: daemon/x52d_main.c:277
+-#: daemon/x52d_main.c:279
 -#, c-format
 -msgid "Foreground = %s"
 -msgstr ""
 -
--#: daemon/x52d_main.c:277 daemon/x52d_main.c:278
+-#: daemon/x52d_main.c:279 daemon/x52d_main.c:280
 -msgid "true"
 -msgstr ""
 -
--#: daemon/x52d_main.c:277 daemon/x52d_main.c:278
+-#: daemon/x52d_main.c:279 daemon/x52d_main.c:280
 -msgid "false"
--msgstr ""
--
--#: daemon/x52d_main.c:278
--#, c-format
--msgid "Quiet = %s"
--msgstr ""
--
--#: daemon/x52d_main.c:279
--#, c-format
--msgid "Verbosity = %d"
 -msgstr ""
 -
 -#: daemon/x52d_main.c:280
 -#, c-format
--msgid "Log file = %s"
+-msgid "Quiet = %s"
 -msgstr ""
 -
 -#: daemon/x52d_main.c:281
 -#, c-format
+-msgid "Verbosity = %d"
+-msgstr ""
+-
+-#: daemon/x52d_main.c:282
+-#, c-format
+-msgid "Log file = %s"
+-msgstr ""
+-
+-#: daemon/x52d_main.c:283
+-#, c-format
 -msgid "Config file = %s"
 -msgstr ""
 -
--#: daemon/x52d_main.c:308
+-#: daemon/x52d_main.c:314
 -msgid "Reloading X52 configuration"
 -msgstr ""
 -
--#: daemon/x52d_main.c:315
+-#: daemon/x52d_main.c:321
 -msgid "Saving X52 configuration to disk"
 -msgstr ""
 -
--#: daemon/x52d_main.c:321
+-#: daemon/x52d_main.c:327
 -#, c-format
 -msgid "Received termination signal %s"
 -msgstr ""
 -
--#: daemon/x52d_main.c:331
+-#: daemon/x52d_main.c:341
 -msgid "Shutting down X52 daemon"
 -msgstr ""
 -
@@ -1434,53 +1434,129 @@ Index: x52pro-linux-0.2.2/po/x52pro-linux.pot
 -msgid "Error processing override '%s.%s=%s'"
 -msgstr ""
 -
--#: daemon/x52d_device.c:36
--msgid "Starting X52 device acquisition thread"
+-#: daemon/x52d_device.c:34
+-msgid "Starting X52 device manager thread"
 -msgstr ""
 -
--#: daemon/x52d_device.c:51
+-#: daemon/x52d_device.c:41
 -#, c-format
 -msgid "Error %d connecting to device: %s"
 -msgstr ""
 -
--#: daemon/x52d_device.c:59
+-#: daemon/x52d_device.c:50
 -msgid "Device connected, writing configuration"
 -msgstr ""
 -
--#: daemon/x52d_device.c:86
--msgid "Starting X52 device update thread"
--msgstr ""
--
--#: daemon/x52d_device.c:107
+-#: daemon/x52d_device.c:72
 -msgid "Initializing libx52"
 -msgstr ""
 -
--#: daemon/x52d_device.c:111
+-#: daemon/x52d_device.c:76
 -#, c-format
 -msgid "Failure %d initializing libx52: %s"
 -msgstr ""
 -
--#: daemon/x52d_device.c:130
--msgid "Shutting down X52 device acquisition thread"
+-#: daemon/x52d_device.c:87
+-msgid "Shutting down X52 device manager thread"
 -msgstr ""
 -
--#: daemon/x52d_device.c:133
--msgid "Shutting down X52 device update thread"
--msgstr ""
--
--#: daemon/x52d_device.c:146
+-#: daemon/x52d_device.c:100
 -#, c-format
 -msgid "Error %d when updating X52 parameter: %s"
 -msgstr ""
 -
--#: daemon/x52d_device.c:226 daemon/x52d_device.c:261
+-#: daemon/x52d_device.c:175
 -#, c-format
 -msgid "Error %d when updating X52 device: %s"
 -msgstr ""
-Index: x52pro-linux-0.2.2/po/xx_PL.po
+-
+-#: daemon/x52d_io.c:40
+-msgid "Starting X52 I/O thread"
+-msgstr ""
+-
+-#: daemon/x52d_io.c:62
+-#, c-format
+-msgid "Error %d opening X52 I/O device: %s"
+-msgstr ""
+-
+-#: daemon/x52d_io.c:73
+-#, c-format
+-msgid "Error %d reading from X52 I/O device: %s"
+-msgstr ""
+-
+-#: daemon/x52d_io.c:100
+-#, c-format
+-msgid "Error %d initializing X52 I/O library: %s"
+-msgstr ""
+-
+-#: daemon/x52d_io.c:106
+-#, c-format
+-msgid "Error %d initializing I/O driver thread: %s"
+-msgstr ""
+-
+-#: daemon/x52d_io.c:113
+-msgid "Shutting down X52 I/O driver thread"
+-msgstr ""
+-
+-#: daemon/x52d_mouse.c:30
+-#, c-format
+-msgid "Setting mouse enable to %s"
+-msgstr ""
+-
+-#: daemon/x52d_mouse.c:46
+-#, c-format
+-msgid "Ignoring mouse speed %d outside supported range (0-%d)"
+-msgstr ""
+-
+-#: daemon/x52d_mouse.c:58
+-#, c-format
+-msgid "Setting mouse speed to %d (delay %d ms, multiplier %f)"
+-msgstr ""
+-
+-#: daemon/x52d_mouse_evdev.c:43
+-#, c-format
+-msgid "Error writing mouse button event (button %d, state %d)"
+-msgstr ""
+-
+-#: daemon/x52d_mouse_evdev.c:69
+-#, c-format
+-msgid "Error writing mouse wheel event %d"
+-msgstr ""
+-
+-#: daemon/x52d_mouse_evdev.c:102
+-#, c-format
+-msgid "Error writing mouse axis event (axis %d, value %d)"
+-msgstr ""
+-
+-#: daemon/x52d_mouse_evdev.c:115
+-msgid "Error writing mouse sync event"
+-msgstr ""
+-
+-#: daemon/x52d_mouse_evdev.c:134
+-msgid "Starting X52 virtual mouse driver thread"
+-msgstr ""
+-
+-#: daemon/x52d_mouse_evdev.c:157
+-#, c-format
+-msgid "Error %d initializing mouse thread: %s"
+-msgstr ""
+-
+-#: daemon/x52d_mouse_evdev.c:164
+-msgid "Shutting down X52 virtual mouse driver thread"
+-msgstr ""
+-
+-#: daemon/x52d_mouse_evdev.c:171
+-msgid "Virtual mouse not created. Ignoring thread state change"
+-msgstr ""
+-
+-#: daemon/x52d_mouse_evdev.c:232
+-#, c-format
+-msgid "Error %d creating X52 virtual mouse: %s"
+-msgstr ""
+Index: libx52-packaging/po/xx_PL.po
 ===================================================================
---- x52pro-linux-0.2.2.orig/po/xx_PL.po
-+++ x52pro-linux-0.2.2/po/xx_PL.po
+--- libx52-packaging.orig/po/xx_PL.po
++++ libx52-packaging/po/xx_PL.po
 @@ -5,7 +5,7 @@
  #
  msgid ""
@@ -1488,5 +1564,5 @@ Index: x52pro-linux-0.2.2/po/xx_PL.po
 -"Project-Id-Version: x52pro-linux 0.2.1\n"
 +"Project-Id-Version: libx52 0.2.2\n"
  "Report-Msgid-Bugs-To: https://github.com/nirenjan/x52pro-linux/issues\n"
- "POT-Creation-Date: 2021-08-30 12:33-0700\n"
- "PO-Revision-Date: 2021-08-30 10:41-0700\n"
+ "POT-Creation-Date: 2021-09-19 16:45-0700\n"
+ "PO-Revision-Date: 2021-09-16 23:04-0700\n"
