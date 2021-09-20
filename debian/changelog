@@ -1,3 +1,9 @@
+x52pro-linux (0.2.3-0ubuntu1) focal; urgency=medium
+
+  * New upstream release
+
+ -- Nirenjan Krishnan <nirenjan@gmail.com>  Mon, 20 Sep 2021 13:28:22 -0700
+
 x52pro-linux (0.2.2-0ubuntu6) focal; urgency=medium
 
   * Add systemd support to install service.
