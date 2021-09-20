@@ -1,3 +1,9 @@
+x52pro-linux (0.2.2-0ubuntu6) focal; urgency=medium
+
+  * Add systemd support to install service.
+
+ -- Nirenjan Krishnan <nirenjan@gmail.com>  Sun, 19 Sep 2021 18:11:12 -0700
+
 x52pro-linux (0.2.2-0ubuntu5) focal; urgency=medium
 
   * Fix copyright notices for subprojects. 
