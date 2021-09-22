@@ -12,7 +12,6 @@ depends=('libusb-1.0-0' 'libhidapi-hidraw0' 'libevdev2')
 makedepends=('autoconf' 'automake' 'libtool' 'pkg-config' 'python3'
          'gettext' 'autopoint' 'libusb-1.0-0-dev' 'libhidapi-dev'
          'libevdev-dev' 'doxygen' 'rsync' 'libcmocka-dev' 'git')
-makedepends=('git')
 source=("git+https://github.com/nirenjan/x52pro-linux.git")
 sha256sums=('SKIP')
 
