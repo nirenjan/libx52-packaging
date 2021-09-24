@@ -2,7 +2,7 @@
 
 pkgname=libx52
 _gitname=x52pro-linux
-pkgver=0.2.3_2_g794b09e
+pkgver=0.2.3_4_gb45dc59
 pkgrel=1
 pkgdesc="Application to control the MFD and LEDs of a Saitek X52/X52Pro HOTAS"
 arch=('x86_64')
