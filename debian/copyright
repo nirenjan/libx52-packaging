@@ -1,10 +1,10 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: libx52
 Upstream-Contact: Nirenjan Krishnan <nirenjan@gmail.com>
-Source: https://github.com/nirenjan/x52pro-linux
+Source: https://github.com/nirenjan/libx52
 
 Files: *
-Copyright: 2012-2021 Nirenjan Krishnan <nirenjan@gmail.com>
+Copyright: 2012-2022 Nirenjan Krishnan <nirenjan@gmail.com>
 License: GPL-2
  X52Pro-Linux is licensed under the terms of the GNU General Public License with
  the following clarification and special exception.
@@ -76,7 +76,7 @@ License: BSD-3-clause
  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 Files: debian/*
-Copyright: 2021 Nirenjan Krishnan <nirenjan@gmail.com>
+Copyright: 2022 Nirenjan Krishnan <nirenjan@gmail.com>
 License: GPL-2+
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
