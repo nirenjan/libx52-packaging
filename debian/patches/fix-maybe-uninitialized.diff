@@ -1,0 +1,16 @@
+Add initialization for some variables
+
+During debuild, the compiler throws a maybe-uninitialized warning. Since
+warnings are treated as errors, this causes the build to break.
+--- libx52-0.3.0.orig/libx52io/test_axis.c
++++ libx52-0.3.0/libx52io/test_axis.c
+@@ -89,7 +89,8 @@ static int group_teardown(void **state)
+     { \
+         libx52io_context *ctx = *state; \
+         int rc; \
+-        int32_t min, max; \
++        int32_t min = 0; \
++        int32_t max = 0; \
+         ctx->pid = X52_PROD_X52 ## prodid; \
+         _x52io_set_axis_range(ctx); \
+         rc = libx52io_get_axis_range(ctx, LIBX52IO_AXIS_ ## axis, &min, &max); \

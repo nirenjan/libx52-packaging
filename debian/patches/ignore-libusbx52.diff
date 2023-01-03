@@ -1,0 +1,13 @@
+libusbx52 is deprecated and the relevant tests are handled separately.
+In addition, there are maybe-uninitialized warnings in the source that
+cannot be easily fixed.
+--- libx52-0.3.0.orig/Makefile.am
++++ libx52-0.3.0/Makefile.am
+@@ -46,7 +46,6 @@ version-info.h: ${top_srcdir}/version-in
+ include libx52/Makefile.am
+ include libx52util/Makefile.am
+ include libx52io/Makefile.am
+-include libusbx52/Makefile.am
+ 
+ include cli/Makefile.am
+ include joytest/Makefile.am
