@@ -7,9 +7,9 @@ License:        GPLv2
 URL:            https://nirenjan.github.io/libx52
 Source0:        https://github.com/nirenjan/libx52/releases/download/v%{version}/%{name}_%{version}.orig.tar.gz
 
-BuildRequires:  hidapi-devel libusb1-devel libevdev-devel
+BuildRequires:  hidapi-devel libusb1-devel libevdev-devel libcmocka-devel
 BuildRequires:  autoconf automake gettext-devel findutils libtool pkg-config python3
-BuildRequires:  systemd-rpm-macros
+BuildRequires:  doxygen systemd-rpm-macros
 Requires:       hidapi libusb1 libevdev gettext
 
 %description
