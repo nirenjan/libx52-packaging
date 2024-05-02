@@ -10,7 +10,8 @@ Source0:        https://github.com/nirenjan/libx52/releases/download/v%{version}
 BuildRequires:  hidapi-devel libusb1-devel libevdev-devel libcmocka-devel
 BuildRequires:  autoconf automake gettext-devel findutils libtool pkg-config python3
 BuildRequires:  doxygen systemd-rpm-macros
-Requires:       hidapi libusb1 libevdev gettext
+BuildRequires:  systemd systemd-udev
+Requires:       hidapi libusb1 libevdev gettext systemd systemd-udev
 
 %description
 libx52 is a user-space driver for the Saitek/MadCatz X52 Pro flight control
